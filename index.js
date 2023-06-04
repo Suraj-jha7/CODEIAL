@@ -8,7 +8,7 @@ app.use('/',require('./routes/index'));
 
 
 
-app.listen(3000,function(err){
+app.listen(port,function(err){
     if(err)
     {
         //console.log('Error:',err);
