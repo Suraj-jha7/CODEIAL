@@ -6,11 +6,17 @@ module.exports = router;
 //home controller
 const homeController=require('../controllers/home_controller');
 router.get('/',homeController.home);
+router.use('/user',require('./users'));
+
+router.get('/contact',homeController.contact);
+
+//for any further routes,acess from here
+//router.use('/routerName',require('./routerfile'));
 
 
 //profile controller
-const profileController=require('../controllers/profile_controller');
-router.get('/profile',profileController.profile);
+//  const profileController=require('../controllers/profile_controller');
+//  router.get('/profile',profileController.profile);
 
 
 //edit controller
